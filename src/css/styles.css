@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif !important;
+  margin: 0 !important;
+  padding: 70px 0 0 0 !important;
+  background-color: #f9f9f9 !important; /* Light Background */
+  color: #000000 !important; /* Default Text */
+}
+/* Navbar Styles */
+.navbar {
+  background-color: #ffd966 !important; /* Yellow background */
+  display: flex !important;
+  align-items: center !important; /* Center items vertically */
+  justify-content: space-between !important; /* Space out logo, links, and button */
+  padding: 10px 20px !important; /* Adjust padding */
+  height: 80px !important; /* Fixed height */
+  position: fixed !important;
+  top: 0 !important; /* Position at the very top */
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+}
+
+/* Logo Section */
+.navbar-brand img {
+  height: 60px !important; /* Ensure logo fits within navbar height */
+  margin-right: 20px !important; /* Space between logo and nav links */
+}
+
+/* Navigation Links */
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important; /* Ensure links are horizontal */
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 20px !important; /* Space between nav links */
+}
+
+.nav-link {
+  color: #ffffff !important; /* Black text */
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 16px !important; /* Uniform font size */
+  transition: color 0.3s ease !important;
+}
+
+.nav-link:hover {
+  color: #38761d !important; /* Green on hover */
+}
+
+/* Join Us Button */
+.join-us {
+  background-color: #38761d !important; /* Green button background */
+  color: #ffffff !important;
+  padding: 8px 20px !important; /* Adjust padding */
+  border-radius: 20px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  transition: background-color 0.3s ease !important;
+  margin-left: 20px !important; /* Space between button and nav links */
+}
+
+.join-us:hover {
+  background-color: #ffd966 !important;
+  color: #000000 !important; /* Yellow background and black text on hover */
+}
+
+/* Container Width */
+.container {
+  width: 100% !important;
+  max-width: 1200px !important; /* Center content */
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+/* About Us Section */
+#about {
+  background-color: #f4f4f4; /* Light modern background */
+  padding: 70px 0;
+}
+
+#about h2 {
+  color: #01579b; /* Modern blue color */
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem; /* Larger headline font */
+  margin-bottom: 40px; /* Add space below the heading */
+}
+
+#about p {
+  color: #616161; /* Neutral gray text */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center; /* Center text for balance */
+  max-width: 900px; /* Limit text width for readability */
+  margin: 0 auto 40px auto; /* Center the paragraph and add bottom space */
+}
+
+#about .about-image {
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Depth effect */
+}
+
+#about .about-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* Responsive padding */
+}
+
+#about .container div {
+  position: relative;
+  text-align: center;
+}
+
+#about .container div .overlay {
+  position: absolute;
+  bottom: 10%; /* Overlay near the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(1, 87, 155, 0.7); /* Semi-transparent blue */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Join Us Section */
+#join-us {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+#join-us h2 {
+  color: #38761d; /* Dark Green */
+  font-weight: bold;
+  text-align: center;
+}
+
+#join-us p {
+  color: #000000; /* Black Text */
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#join-us .form-label {
+  color: #38761d; /* Dark Green Labels */
+}
+
+#join-us .form-control {
+  border: 1px solid #c2a856; /* Accent Border */
+  border-radius: 5px;
+}
+
+#join-us .btn {
+  background-color: #38761d; /* Dark Green Button */
+  color: #ffffff; /* White Text */
+}
+
+#join-us .btn:hover {
+  background-color: #c2a856; /* Brownish Hover */
+  color: #000000; /* Black Text */
+}

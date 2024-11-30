@@ -1,0 +1,85 @@
+/* Slider Section */
+#heroSlider {
+  margin-top: 60px;
+  position: relative;
+  left: 0;
+  max-width: 1200px; /* Center content and limit width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  overflow: hidden; /* Prevent overflow of images */
+}
+
+.carousel-inner img {
+  width: 100%; /* Full width of the container */
+  height: 500px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensures images fill the space without distortion */
+}
+
+/* Caption Styling */
+.carousel-caption {
+  background-color: rgba(
+    1,
+    87,
+    155,
+    0.6
+  ); /* Semi-transparent blue background */
+  color: #ffffff; /* White text */
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjust font size */
+  bottom: 100px; /* Position the caption closer to the bottom */
+  left: 50%; /* Center caption horizontally */
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Control Arrows Styling */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px; /* Adjust width */
+  height: 50px; /* Adjust height */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay to controls */
+  border-radius: 50%; /* Circular controls */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Ensure visibility on dark backgrounds */
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .carousel-caption {
+    font-size: 1rem; /* Adjust caption font size */
+    padding: 10px;
+    bottom: 10px; /* Reduce bottom spacing */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px; /* Adjust size for smaller screens */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 15px;
+    height: 15px; /* Smaller icons */
+  }
+
+  .carousel-inner img {
+    height: 300px; /* Smaller image height for smaller screens */
+  }
+}
