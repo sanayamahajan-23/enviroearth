@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll"; // Import Link from react-scroll
+import { Link } from "react-router-dom"; // Import Link from react-scroll
 
 // Placeholder for service icons
 const icons = [
@@ -67,16 +67,7 @@ const Services = () => {
               }}
             >
               {/* Wrap each card in a react-scroll Link */}
-              <Link
-                to="contact" // Targeting the element with id="contact"
-                smooth={true} // Enabling smooth scrolling
-                duration={500} // Duration of the scroll (in ms)
-                style={{
-                  textDecoration: "none",
-                  color: "inherit", // Prevent link text from being blue
-                  cursor: "pointer", // Change cursor on hover
-                }}
-              >
+              <Link to="/contact-us" className="nav-link">
                 {/* Icon Section */}
                 <div
                   style={{
