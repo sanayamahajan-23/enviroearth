@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+
+const FORMSPREE_CONTACT_ID = "YOUR_CONTACT_FORMSPREE_ID"; // Replace with your Formspree form ID
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -18,35 +19,29 @@ const ContactUs = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Send the form data to the EmailJS service
-    emailjs
-      .sendForm(
-        "service_ju438q2", // Replace with your EmailJS service ID
-        "template_hlg25yk", // Replace with your EmailJS template ID
-        e.target, // The form element
-        "Bt27dknEu9fu5fhBi" // Replace with your EmailJS user ID
-      )
-      .then(
-        (result) => {
-          console.log("Message sent:", result.text);
-          toast.success("Message sent successfully!");
+    try {
+      const response = await fetch(`https://formspree.io/f/mnjyvkgz`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        (error) => {
-          console.log("Error sending message:", error.text);
-          toast.error("Error sending your message. Please try again.");
-        }
-      );
+        body: JSON.stringify(formData),
+      });
 
-    // Reset form after submission
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+      if (response.ok) {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast.error("Error sending your message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Formspree error:", error);
+      toast.error("Error sending your message. Please try again.");
+    }
   };
 
   return (
