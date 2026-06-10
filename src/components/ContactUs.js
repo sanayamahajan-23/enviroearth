@@ -3,8 +3,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
-const FORMSPREE_CONTACT_ID = "YOUR_CONTACT_FORMSPREE_ID"; // Replace with your Formspree form ID
-
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",

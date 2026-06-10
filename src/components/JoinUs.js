@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify"; // Import Toastify
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
 
-const FORMSPREE_JOIN_ID = "YOUR_JOIN_FORMSPREE_ID"; // Replace with your Formspree form ID
-
 const JoinUsForm = () => {
   const [formData, setFormData] = useState({
     name: "",
